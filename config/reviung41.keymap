@@ -32,12 +32,6 @@
             key-positions = <36 37>;
             layers = <0>;
         };
-
-        Lshift {
-            bindings = <&kp LSHFT>;
-            key-positions = <14 15>;
-            layers = <0>;
-        };
     };
 
     behaviors {
@@ -60,10 +54,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESC        &kp Q  &kp W  &kp E     &kp R    &kp T             &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&mt LCTRL TAB  &kp A  &kp S  &kp D     &lt 5 F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHIFT     &kp Z  &kp X  &kp C     &kp V    &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                             &kp LALT  &mo 6           &kp SPACE         &mo 4  &kp RGUI
+&kp ESC        &kp Q        &kp W  &kp E     &kp R    &kp T               &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&mt LCTRL TAB  &kp A        &kp S  &kp D     &lt 5 F  &kp G               &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHIFT     &mt LSHFT Z  &kp X  &kp C     &kp V    &lt 3 B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                   &kp LALT  &mo 6             &kp SPACE         &mo 4  &kp RGUI
             >;
         };
 
@@ -108,7 +102,7 @@
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                    &none         &kp C_VOLUME_UP  &kp C_BRI_INC  &none         &none         &none
 &none            &none            &none            &none            &none   &none                    &sys_reset    &kp C_VOL_DN     &kp C_BRI_DEC  &none         &none         &kp K_MUTE
-                                                   &trans           &trans                   &tog 3                &trans           &trans
+                                                   &trans           &trans                   &trans                &trans           &trans
             >;
         };
 
