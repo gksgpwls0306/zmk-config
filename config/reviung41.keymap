@@ -26,6 +26,11 @@
             key-positions = <20 21>;
             layers = <0>;
         };
+
+        leftGui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <36 37>;
+        };
     };
 
     behaviors {
