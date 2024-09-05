@@ -30,6 +30,13 @@
         leftGui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <36 37>;
+            layers = <0>;
+        };
+
+        Lshift {
+            bindings = <&kp LSHFT>;
+            key-positions = <14 15>;
+            layers = <0>;
         };
     };
 
