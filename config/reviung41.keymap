@@ -15,10 +15,16 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             layers = <0>;
             timeout-ms = <50>;
             require-prior-idle-ms = <0>;
+        };
+
+        ko-en {
+            bindings = <&kp CLCK>;
+            key-positions = <20 21>;
+            layers = <0>;
         };
     };
 
@@ -28,13 +34,6 @@
             label = "Q/ESC";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp ESC>;
-        };
-
-        ctrlEN_CAPS: ctrlEN_CAPS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL/EN_CAPS";
-            #binding-cells = <0>;
-            bindings = <&mt LCTRL LANGUAGE_1>, <&kp CAPSLOCK>;
         };
     };
 
@@ -49,10 +48,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E     &kp R    &kp T             &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&ctrlEN_CAPS  &kp A  &kp S  &kp D     &lt 5 F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z  &kp X  &kp C     &kp V    &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                            &kp LALT  &mo 6           &kp SPACE         &mo 4  &kp RGUI
+&kp ESC        &kp Q  &kp W  &kp E     &kp R    &kp T             &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&mt LCTRL TAB  &kp A  &kp S  &kp D     &lt 5 F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHIFT     &kp Z  &kp X  &kp C     &kp V    &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                             &kp LALT  &mo 6           &kp SPACE         &mo 4  &kp RGUI
             >;
         };
 
@@ -94,10 +93,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                    &none         &kp C_VOL_UP  &kp C_BRI_INC  &none         &none         &none
-&none            &none            &none            &none            &none   &none                    &sys_reset    &kp C_VOL_DN  &kp C_BRI_DEC  &none         &none         &kp K_MUTE
-                                                   &trans           &trans                   &tog 3                &trans        &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                    &none         &kp C_VOLUME_UP  &kp C_BRI_INC  &none         &none         &none
+&none            &none            &none            &none            &none   &none                    &sys_reset    &kp C_VOL_DN     &kp C_BRI_DEC  &none         &none         &kp K_MUTE
+                                                   &trans           &trans                   &tog 3                &trans           &trans
             >;
         };
 
