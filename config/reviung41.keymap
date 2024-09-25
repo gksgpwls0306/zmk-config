@@ -32,6 +32,12 @@
             key-positions = <36 37>;
             layers = <0>;
         };
+
+        ko-en-win {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <20 21>;
+            layers = <7>;
+        };
     };
 
     behaviors {
@@ -101,7 +107,7 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                    &none         &kp C_VOLUME_UP  &kp C_BRI_INC  &none         &none         &none
-&none            &none            &none            &none            &none   &none                    &sys_reset    &kp C_VOL_DN     &kp C_BRI_DEC  &none         &none         &kp K_MUTE
+&none            &none            &none            &none            &none   &none                    &sys_reset    &kp C_VOL_DN     &kp C_BRI_DEC  &none         &none         &kp C_MUTE
                                                    &trans           &trans                   &trans                &trans           &trans
             >;
         };
@@ -111,7 +117,7 @@
 &kp F7  &kp F8     &kp F9     &kp F10       &kp F11       &kp F12          &trans         &trans    &kp UP     &trans     &trans             &kp BACKSPACE
 &kp F1  &kp F2     &kp F3     &kp F4        &kp F5        &kp F6           &kp ENTER      &kp LEFT  &kp DOWN   &kp RIGHT  &kp LS(SEMICOLON)  &kp LS(SQT)
 &trans  &kp LSHFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans           &kp BACKSPACE  &trans    &kp COMMA  &kp DOT    &kp LS(SLASH)      &trans
-                              &kp LEFT_GUI  &trans                 &trans                 &trans    &trans
+                              &kp LEFT_GUI  &mo 7                  &trans                 &trans    &trans
             >;
         };
 
@@ -129,7 +135,16 @@
 &kp ESC    &kp GRAVE  &trans     &trans     &kp DOLLAR  &kp AMPERSAND          &kp PIPE       &trans    &kp LG(I)  &trans       &trans           &kp BACKSPACE
 &kp LSHFT  &kp LG(A)  &kp LG(S)  &trans     &kp LG(F)   &kp LS(MINUS)          &kp ENTER      &kp LBRC  &kp LBKT   &kp RBKT     &kp RIGHT_BRACE  &trans
 &trans     &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)   &kp MINUS              &kp BACKSPACE  &kp LPAR  &kp RPAR   &kp LG(DOT)  &trans           &trans
-                                 &trans     &trans                     &trans                 &trans    &trans
+                                 &trans     &trans                     &trans                 &mo 7     &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans                   &trans          &trans  &trans
             >;
         };
     };
